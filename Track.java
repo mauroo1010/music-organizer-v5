@@ -6,7 +6,7 @@
  * @version 2011.07.31
  */
 public class Track
-{
+{ 
     // The artist.
     private String artist;
     // The track's title.
@@ -67,7 +67,7 @@ public class Track
      * Return details of the track: artist, title and file name.
      * @return The track's details.
      */
-    public String getDetails()
+    public String getDetails()  
     {
         return artist + ": " + title + "  (file: " + filename + ")";
     }

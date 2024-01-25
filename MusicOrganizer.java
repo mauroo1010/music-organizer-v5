@@ -12,7 +12,7 @@ public class MusicOrganizer
     // An ArrayList for storing music tracks.
     private ArrayList<Track> tracks;
     // A player for the music tracks.
-    private MusicPlayer player;
+    private MusicPlayer player  ;
     // A reader that can read music files and load them as tracks.
     private TrackReader reader;
 
@@ -168,6 +168,14 @@ public class MusicOrganizer
         // Put all thetracks into the organizer.
         for(Track track : tempTracks) {
             addTrack(track);
+        }
+    }
+      public void findInTitle(String searchString) {
+        for (Track track : tracks){
+            String tittle = track.getTitle();
+            if (tittle.contains(searchString)) {
+                System.out.println(track.getDetails());
+            }
         }
     }
 }
