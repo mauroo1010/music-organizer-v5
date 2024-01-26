@@ -14,7 +14,7 @@ public class Track
     // Where the track is stored.
     private String filename;
     
-    public int playCount;
+    private int playCount;
     /**
      * Constructor for objects of class Track.
      * @param artist The track's artist.
@@ -24,7 +24,9 @@ public class Track
     public Track(String artist, String title, String filename)
     {
         setDetails(artist, title, filename);
+        playCount = 0;
     }
+    
     
     /**
      * Constructor for objects of class Track.
