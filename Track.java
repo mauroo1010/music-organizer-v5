@@ -15,6 +15,8 @@ public class Track
     private String filename;
     
     private int playCount;
+    
+    public int ritmo;
     /**
      * Constructor for objects of class Track.
      * @param artist The track's artist.
@@ -25,9 +27,8 @@ public class Track
     {
         setDetails(artist, title, filename);
         playCount = 0;
+        ritmo = 0;
     }
-    
-    
     /**
      * Constructor for objects of class Track.
      * It is assumed that the file name cannot be
@@ -72,7 +73,7 @@ public class Track
      */
     public String getDetails()  
     {
-        return artist + ": " + title + " (file: " + filename + ")" + " Reproducciones: " + playCount;
+        return artist + ": " + title + " (file: " + filename + ")" + " Reproducciones: " + playCount + " ritmo: " + ritmo;
     }
     
     /**
@@ -86,6 +87,12 @@ public class Track
         this.artist = artist;
         this.title = title;
         this.filename = filename;
+    }
+      public int getRitmo() {
+        return ritmo;
+    }
+    public void setRitmo(int newritmo) {
+        ritmo = newritmo;
     }
      public void resetCount() {
         playCount = 0;

@@ -28,7 +28,12 @@ public class MusicOrganizer
         System.out.println("Music library loaded. " + getNumberOfTracks() + " tracks.");
         System.out.println();
     }
-    
+    public void setRitmo(int index, int newRitmo) {
+        if (indexValid(index)) {
+            Track track = tracks.get(index);
+            track.setRitmo(newRitmo);
+        }
+    }
     /**
      * Add a track file to the collection.
      * @param filename The file name of the track to be added.
