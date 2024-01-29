@@ -91,8 +91,8 @@ public class Track
       public int getRitmo() {
         return ritmo;
     }
-    public void setRitmo(int newritmo) {
-        ritmo = newritmo;
+    public void setRitmo(int newRitmo) {
+        ritmo = newRitmo;
     }
      public void resetCount() {
         playCount = 0;
