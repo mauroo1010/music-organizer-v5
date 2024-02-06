@@ -60,12 +60,14 @@ public class MusicOrganizer
      */
     public void playTrack(int index)
     {
-        if(indexValid(index)) {
-            Track track = tracks.get(index);
-            player.startPlaying(track.getFilename());
-            System.out.println("Now playing: " + track.getArtist() + " - " + track.getTitle());
-            track.incrementarCount();
-             isPlaying = true;
+         if(!isPlaying) {
+            if(indexValid(index)) {
+                Track track = tracks.get(index);
+                player.startPlaying(track.getFilename());
+                track.incrementarCount();
+                System.out.println("Now playing; " + track.getArtist() + " - " + track.getTitle());
+                isPlaying = true;
+            }
         }
         else {
             System.out.println("Error, ya hay otra canción en funcionamiento");
